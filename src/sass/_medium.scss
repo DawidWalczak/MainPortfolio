@@ -1,0 +1,130 @@
+@media (min-width: 992px) {
+	
+	section {
+		scroll-margin-top: 69px;
+	}
+
+	.hamburger {
+		display: none;
+	}
+	.navigation {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 0;
+		width: 100%;
+		height: 7em;
+		position: fixed;
+		background-color: rgba(52, 58, 64, 0.7);
+		z-index: 1000;
+
+		&__box {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			height: 7em;
+			z-index: 1000;
+
+			.logo {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+				transform: translateX(0);
+				z-index: 1011;
+
+				&__title {
+					position: static;
+					padding: 0.5em 1em;
+					font-size: 3rem;
+					font-weight: bold;
+					color: #95d5b2;
+					transform: translateX(0);
+				}
+			}
+
+			.menu {
+				justify-content: end;
+				flex-direction: row;
+				position: static;
+				height: 100%;
+				background-color: transparent;
+				transform: translateX(0);
+
+				&__link {
+					padding: 0.5em;
+					transition: color 0.3s;
+					font-size: 2.2rem;
+
+					&:last-child {
+						margin-right: 2em;
+					}
+
+					&:hover {
+						color: #95d5b2;
+					}
+
+					&::after {
+						content: '';
+						position: absolute;
+						bottom: 5px;
+						left: 0;
+						width: 100%;
+						height: 5px;
+						background-color: #95d5b2;
+						transition: transform 0.3s;
+						transform: scaleX(0);
+						transform-origin: right;
+					}
+
+					&:hover:after {
+						transform: scaleX(1);
+						transform-origin: left;
+					}
+				}
+			}
+		}
+	}
+
+	.hero {
+		&__btn {
+			&:hover {
+				filter: drop-shadow(0 0 5px #333);
+				cursor: pointer;
+			}
+		}
+	}
+
+	.projects {
+		.cards {
+			&__card {
+				&__link {
+					&:hover {
+						color: #343a40;
+						background-color: #04a6c2;
+					}
+				}
+			}
+		}
+	}
+
+	.skills {
+		&__box {
+			border-radius: 9px;
+
+			&:nth-child(odd) {
+				border-radius: 9px;
+			}
+		}
+	}
+
+	.contact {
+		&__form {
+			button:hover {
+				background-color: #ccff33;
+				border: 2px solid #9ef01a;
+				box-shadow: 0 0 5px #9ef01a;
+			}
+		}
+	}
+}
